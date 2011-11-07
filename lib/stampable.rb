@@ -11,11 +11,11 @@ module Users
 
   module InstanceMethods
     def set_updated_by
-      self.updated_by = User.current.username unless User.current.nil?
+      self.updated_by = User.current.username if User.current && self.respond_to? :updated_by 
     end
 
     def set_created_by
-      self.created_by = User.current.username unless User.current.nil?
+      self.created_by = User.current.username if User.current && if self.respond_to? :created_by
     end
   end
 end
