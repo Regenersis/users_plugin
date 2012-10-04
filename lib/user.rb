@@ -10,5 +10,4 @@ class User < ActiveResource::Base
     end
     false
   end
-
 end
