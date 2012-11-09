@@ -1,4 +1,5 @@
 $: << File.expand_path(File.dirname(__FILE__)) + '/users_cas_auth'
+$: << File.expand_path(File.dirname(__FILE__)) + '/../config'
 
 if defined?(Rails) && Rails::VERSION::MAJOR == 3
   require 'engine'
@@ -20,4 +21,5 @@ else
     require 'migration_helper'
     require 'stampable'
   end
+  require 'routes'
 end
