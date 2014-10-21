@@ -1,7 +1,7 @@
 $: << File.expand_path(File.dirname(__FILE__)) + '/users_cas_auth'
 $: << File.expand_path(File.dirname(__FILE__)) + '/../config'
 
-if defined?(Rails) && Rails::VERSION::MAJOR == 3
+if defined?(Rails) && Rails::VERSION::MAJOR > 2
   require 'engine'
   require 'user_session'
   require 'user_helper'

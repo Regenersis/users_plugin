@@ -1,4 +1,4 @@
-if defined?(Rails) && Rails::VERSION::MAJOR == 3
+if defined?(Rails) && Rails::VERSION::MAJOR > 2
   Rails.application.routes.draw do
     match "/pages/logout" => "application#logout"
   end
