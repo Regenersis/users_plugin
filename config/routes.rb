@@ -1,6 +1,6 @@
 if defined?(Rails) && Rails::VERSION::MAJOR > 2
   Rails.application.routes.draw do
-    match "/pages/logout" => "application#logout"
+    get "/pages/logout" => "application#logout"
   end
 else
   # Redefine clear! method to do nothing (usually it erases the routes)
